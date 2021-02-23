@@ -13,4 +13,4 @@
 
 ###  License
 
-[a link](https://github.com/IssamMerikhi/PredictingFootballGames/edit/main/LICENSE)
+[MIT](https://github.com/IssamMerikhi/PredictingFootballGames/edit/main/LICENSE)
