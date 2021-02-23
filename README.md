@@ -9,8 +9,9 @@
 ###  Graphs have been made with plotly.
 
 ###  Author and acknowledgment.
-
+  
+Developped by Issam Merikhi with the support Yassine Lakhoua as a part of an university project.
 
 ###  License
 
-[MIT](https://github.com/IssamMerikhi/PredictingFootballGames/edit/main/LICENSE)
+[The MIT license](https://github.com/IssamMerikhi/PredictingFootballGames/edit/main/LICENSE)
