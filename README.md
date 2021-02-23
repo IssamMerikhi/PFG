@@ -5,8 +5,8 @@
 ###  Graphs have been made with plotly.
 
 > Make sure to install and import all requirements. Treemap must have issue since a special version of plotly is required.
+> ![Uploading A828DCC3-0F77-43B2-97C0-1E8E67532201.jpeg…]()
 
-###  Graphs have been made with plotly.
 
 ###  Author and acknowledgment.
   
