@@ -20,7 +20,7 @@ Make sure to install and import all requirements. Treemap must have issue since 
 
 ##  Author and acknowledgment.
   
-Developped by Issam Merikhi with the support Yassine Lakhoua as a part of an university project.
+Developped by Issam Merikhi with the support Yassine Lakhoua as a part of an university project. University of Strasbourg.
 
 ###  License
 
