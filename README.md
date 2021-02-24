@@ -7,7 +7,8 @@
 Graphs have been made with plotly
 Make sure to install and import all requirements. Treemap must have issue since a special version of plotly is required.
 
-![](images/graph.png)
+<img src = "images/graph.png" width = "auto" height = "auto" >
+
 
 ###  Author and acknowledgment.
   
