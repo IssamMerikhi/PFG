@@ -4,6 +4,11 @@ Fun project to predict result of a Premier League football game using classifica
 
 ## Built With
 
+- [plotly](https://plotly.com/python/) - graphs
+- [sklearn](https://scikit-learn.org/stable/) - classifiers
+- [keras](https://keras.io/) - NN
+
+
 
 ##  Data Viz.
 
