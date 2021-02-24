@@ -2,7 +2,10 @@
 
 Fun project to predict result of a Premier League football game using classification algorithms such as SVM or random forest.
 
-###  Data Viz.
+## Built With
+
+
+##  Data Viz.
 
 Graphs have been made with plotly
 Make sure to install and import all requirements. Treemap must have issue since a special version of plotly is required.
@@ -10,7 +13,7 @@ Make sure to install and import all requirements. Treemap must have issue since 
 <img src = "images/graph.png" width = "auto" height = "auto" >
 
 
-###  Author and acknowledgment.
+##  Author and acknowledgment.
   
 Developped by Issam Merikhi with the support Yassine Lakhoua as a part of an university project.
 
