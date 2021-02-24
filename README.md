@@ -5,7 +5,7 @@
 ###  Graphs have been made with plotly.
 
 > Make sure to install and import all requirements. Treemap must have issue since a special version of plotly is required.
-> ![Uploading A828DCC3-0F77-43B2-97C0-1E8E67532201.jpeg…]()
+![154460622_428102028450199_1010507595114336261_n](https://user-images.githubusercontent.com/47690579/108971553-b8039280-7682-11eb-92dd-13606bf520c6.jpg)
 
 
 ###  Author and acknowledgment.
