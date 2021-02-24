@@ -8,7 +8,7 @@ Our target variable Y is FTR (Full Time Result). It is a categorical variable (2
 
 **IMPORTANTS HINTS**
 
-Make sur to install all requirements 
+Use [pip](https://pypi.org/project/pip/) to install all requirements: `pip install -r requirements.txt`
 
   - Preprocessing : keep only numerical variables.
   - SelectKBest : choose the most relevant features.
