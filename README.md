@@ -4,15 +4,19 @@ PredictingFootballGames is a project to predict result of a Premier League footb
 Our target variable Y is FTR (Full Time Result). It is a categorical variable (2-Home Win, 1-Away Win, 0-Draw). The database is composed by some features such as shots, shots on target, possession, corners, fouls. Every variable is clearly expained in the .py file. The database is for the english country (Premier League) and is about 3 seasons.
 
 
+## Requirements
+
 **IMPORTANTS HINTS**
 
-- Preprocessing : keep only numerical variables.
-- SelectKBest : choose the most relevant features.
-- Data viz : important to understand data.
-- Classifiers : Logistic Regression, Random Forrest and SVM.
-- GridSearchCV : for tuning hyperparameters and keep the best combinaison of parameters.
-- Cross Validation : useful to have the best set of train/test sample.
-- NN : keras, Sequenial, Dense, Activation
+Make sur to install all requirements 
+
+  - Preprocessing : keep only numerical variables.
+  - SelectKBest : choose the most relevant features.
+  - Data viz : important to understand data.
+  - Classifiers : Logistic Regression, Random Forrest and SVM.
+  - GridSearchCV : for tuning hyperparameters and keep the best combinaison of parameters.
+  - Cross Validation : useful to have the best set of train/test sample.
+  - NN : keras, Sequenial, Dense, Activation
 
 ## Built With
 
