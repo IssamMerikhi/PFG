@@ -113,9 +113,9 @@ Real_Madrid = {
     'data': pd.DataFrame([3,4,2,1,1]).transpose()
 }
 
+favicon = Image.open('./favicon.png')
+st.set_page_config(page_title='PibeOro', page_icon = favicon)
 
-
-st.set_page_config(page_title='PibeOro')
 st.title('🚀Bet on your favourite Super League match')
 st.markdown("***")
 
@@ -145,6 +145,7 @@ second_team = st.selectbox('2nd team', Teams_names)
 st.image(Teams[second_team]['logo'], width=200)
 
 
+st.markdown("***")
 
 
 st.markdown("""
