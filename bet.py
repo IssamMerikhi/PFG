@@ -46,47 +46,62 @@ SVMGrid.fit(X_train, y_train)
 SVMPred = SVMGrid.predict(X_test)
 
 
-Man_City = Image.open('logo/man_city_logo.png')
-Arsenal = Image.open('logo/arsenal_logo2.png')
+
+
+Manchester_City = {
+    'name' : 'Manchester City',
+    'logo':Image.open('logo/man_city_logo.png'),
+    'data': pd.DataFrame([3,4,2,1,8]).transpose()
+}
+
+Arsenal = {
+    'name' : 'Arsenal',
+    'logo' : Image.open('logo/arsenal_logo2.png'),
+    'data' : pd.DataFrame([0,1,2,4,4]).transpose()    
+}
+
 
 st.set_page_config(page_title='PibeOro')
+st.title('Bet on your favourite Super League match')
 
+Teams = {
+         'Manchester City' : Manchester_City,
+         'Arsenal' : Arsenal
+        }
+Teams_names = []
 
-#col1, col2 = st.beta_columns([3,3])
-
-teams = {'Man_City': Man_City, 
-         'Arsenal': Arsenal}
-first_team = st.selectbox('1st team', list(teams.keys()))
-st.image(teams[first_team], width=200)
-second_team = st.selectbox('2nd team', list(teams.keys()))
-st.image(teams[second_team], width=200)
-
-
-
+for k in Teams.values():
+  Teams_names.append(k['name'])
 
 
 
 
+first_team = st.selectbox('1st team', Teams_names)
+st.image(Teams[first_team]['logo'], width=200)
+second_team = st.selectbox('2nd team', Teams_names)
+st.image(Teams[second_team]['logo'], width=200)
 
 
 
 
 
 
+if (SVMGrid.predict(Teams[first_team]['data']) > SVMGrid.predict(Teams[second_team]['data'])):
+    st.write(Teams[first_team]['name'],' win')
+    st.image(Teams[first_team]['logo'], width=200)
 
-"""
-man_city = pd.DataFrame([3,4,2,1,8]).transpose()
-arsenal = pd.DataFrame([0,1,2,4,4]).transpose()
+if (SVMGrid.predict(Teams[first_team]['data']) < SVMGrid.predict(Teams[second_team]['data'])):
+    st.write(Teams[second_team]['name'],' win')
+    st.image(Teams[second_team]['logo'], width=200)
 
-if (SVMGrid.predict(man_city) > SVMGrid.predict(arsenal)):
-    st.write('MANCHESTER CITY IS THE WINNER')
-    st.image(man_city_logo, width=200)
 
-if (SVMGrid.predict(man_city) < SVMGrid.predict(arsenal)):
-    st.write('ARSENAL IS THE WINNER')
-    st.image(arsenal_logo, width=400)
-
-if (SVMGrid.predict(man_city) == SVMGrid.predict(arsenal)):
+if (SVMGrid.predict(Teams[first_team]['data']) == SVMGrid.predict(Teams[second_team]['data'])):
     st.write('DRAW')
 
-"""
+
+
+
+
+
+
+
