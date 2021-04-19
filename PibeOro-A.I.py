@@ -2,8 +2,6 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import streamlit as st
-from matplotlib import *
-import matplotlib.pyplot as plt
 import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
