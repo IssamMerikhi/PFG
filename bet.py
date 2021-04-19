@@ -48,12 +48,6 @@ SVMPred = SVMGrid.predict(X_test)
 
 
 
-Manchester_City = {
-    'name' : 'Manchester City',
-    'logo':Image.open('logo/man_city_logo.png'),
-    'data': pd.DataFrame([3,4,2,1,8]).transpose()
-}
-
 Arsenal = {
     'name' : 'Arsenal',
     'logo' : Image.open('logo/arsenal_logo2.png'),
@@ -61,12 +55,81 @@ Arsenal = {
 }
 
 
+Inter = {
+    'name' : 'Internazionale',
+    'logo' : Image.open('logo/inter_logo.png'),
+    'data' : pd.DataFrame([4,1,2,4,5]).transpose()    
+}
+
+
+Milan = {
+    'name' : 'Milan',
+    'logo' : Image.open('logo/milan_logo.png'),
+    'data' : pd.DataFrame([2,1,2,4,5]).transpose()    
+}
+
+
+Chelsea = {
+    'name' : 'Chelsea',
+    'logo':Image.open('logo/chelsea_logo.png'),
+    'data': pd.DataFrame([1,1,1,3,0]).transpose()
+}
+
+
+Manchester_United = {
+    'name' : 'Manchester United',
+    'logo':Image.open('logo/manchester_united_logo.png'),
+    'data': pd.DataFrame([0,0,1,1,0]).transpose()
+}
+
+Liverpool = {
+    'name': 'Liverpool',
+    'logo': Image.open('logo/liverpool_logo.png'),
+    'data': pd.DataFrame([0,0,1,1,1]).transpose()
+}
+
+
+Manchester_City = {
+    'name' : 'Manchester City',
+    'logo':Image.open('logo/man_city_logo.png'),
+    'data': pd.DataFrame([3,4,2,1,8]).transpose()
+}
+
+Juventus = {
+    'name' : 'Juventus',
+    'logo':Image.open('logo/juve_logo.png'),
+    'data': pd.DataFrame([3,4,2,1,2]).transpose()
+}
+
+Barcelone = {
+    'name' : 'Barcelone',
+    'logo':Image.open('logo/barcelone_logo.png'),
+    'data': pd.DataFrame([3,4,2,1,8]).transpose()
+}
+
+Real_Madrid = {
+    'name' : 'Real Madrid',
+    'logo':Image.open('logo/real_madrid_logo.png'),
+    'data': pd.DataFrame([3,4,2,1,1]).transpose()
+}
+
+
+
 st.set_page_config(page_title='PibeOro')
-st.title('Bet on your favourite Super League match')
+st.title('🚀Bet on your favourite Super League match')
+st.markdown("***")
 
 Teams = {
          'Manchester City' : Manchester_City,
-         'Arsenal' : Arsenal
+         'Arsenal' : Arsenal,
+         'Internazionale' : Inter,
+         'Milan' : Milan,
+         'Chelsea' : Chelsea,
+         'Manchester United': Manchester_United,
+         'Liverpool' : Liverpool,
+         'Juventus' : Juventus,
+         'Barcelone' : Barcelone,
+         'Real Madrid' : Real_Madrid
         }
 Teams_names = []
 
@@ -84,19 +147,30 @@ st.image(Teams[second_team]['logo'], width=200)
 
 
 
+st.markdown("""
+<style>
+.big-font {
+    font-size:40px !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 
-if (SVMGrid.predict(Teams[first_team]['data']) > SVMGrid.predict(Teams[second_team]['data'])):
-    st.write(Teams[first_team]['name'],' win')
-    st.image(Teams[first_team]['logo'], width=200)
+if (SVMGrid.predict(Teams[first_team]['data']) == 2 and (SVMGrid.predict(Teams[second_team]['data']) == 1 or SVMGrid.predict(Teams[second_team]['data']) == 0)):
+    st.markdown('<p class="big-font">⚽'+str(Teams[first_team]['name'])+' win !</p>', unsafe_allow_html=True)
 
-if (SVMGrid.predict(Teams[first_team]['data']) < SVMGrid.predict(Teams[second_team]['data'])):
-    st.write(Teams[second_team]['name'],' win')
-    st.image(Teams[second_team]['logo'], width=200)
+if ((SVMGrid.predict(Teams[first_team]['data']) == 1 or SVMGrid.predict(Teams[first_team]['data']) == 0) and SVMGrid.predict(Teams[second_team]['data']) == 2):
+    st.markdown('<p class="big-font">⚽'+str(Teams[second_team]['name'])+' win !</p>', unsafe_allow_html=True)
+
+if ((SVMGrid.predict(Teams[first_team]['data']) == 0) and SVMGrid.predict(Teams[second_team]['data']) == 1):
+    st.markdown('<p class="big-font">⚽'+str(Teams[first_team]['name'])+' win !</p>', unsafe_allow_html=True)
+
+if ((SVMGrid.predict(Teams[first_team]['data']) == 1) and SVMGrid.predict(Teams[second_team]['data']) == 0):
+    st.markdown('<p class="big-font">⚽'+str(Teams[second_team]['name'])+' win !</p>', unsafe_allow_html=True)
 
 
 if (SVMGrid.predict(Teams[first_team]['data']) == SVMGrid.predict(Teams[second_team]['data'])):
-    st.write('DRAW')
+    st.markdown('<p class="big-font">⚽ DRAW !</p>', unsafe_allow_html=True)
 
 
 
