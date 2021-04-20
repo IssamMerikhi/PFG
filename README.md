@@ -1,7 +1,16 @@
 # PibeOro A.I. 
 
+<p align="center">
+  <img src ="/images/favicon.png" width = "auto" height = "170px">
+</p>
+
 PibeOro is a project to predict result of a Premier League football game using classification algorithms such as SVM or random forest.
 Our target variable Y is FTR (Full Time Result). It is a categorical variable (2-Home Win, 1-Away Win, 0-Draw). The database is composed by some features such as shots, shots on target, possession, corners, fouls. Every variable is clearly expained in the .ipynb file.
+
+
+<p align="center">
+  <img src ="/images/head.png" width = "auto">
+</p>
 
 
 ## Requirements
