@@ -1,7 +1,7 @@
 # PibeOro A.I. 
 
 <p align="center">
-  <img src ="/images/favicon.png" width = "auto" height = "170px">
+  <img src ="/images/favicon.png">
 </p>
 
 PibeOro is a project to predict result of a Premier League football game using classification algorithms such as SVM or random forest.
@@ -9,7 +9,7 @@ Our target variable Y is FTR (Full Time Result). It is a categorical variable (2
 
 
 <p align="center">
-  <img src ="/images/head.png" width = "auto">
+  <img src ="/images/head.png">
 </p>
 
 
