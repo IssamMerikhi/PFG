@@ -114,7 +114,10 @@ Real_Madrid = {
 favicon = Image.open('./favicon.png')
 st.set_page_config(page_title='PibeOro', page_icon = favicon)
 
-st.title('🚀Bet on your favourite Super League match')
+
+st.title('🤖 Pibe Oro A.I. 🧠')
+
+st.markdown('<p class="big-font">🚀Bet on your favourite Super League match. </p>', unsafe_allow_html=True)
 st.markdown("***")
 
 Teams = {
@@ -149,7 +152,7 @@ st.markdown("***")
 st.markdown("""
 <style>
 .big-font {
-    font-size:40px !important;
+    font-size:34px !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -172,9 +175,18 @@ if (SVMGrid.predict(Teams[first_team]['data']) == SVMGrid.predict(Teams[second_t
     st.markdown('<p class="big-font">⚽ DRAW !</p>', unsafe_allow_html=True)
 
 
+st.write(" ")
+st.write(" ")
+st.write(" ")
 
 
+st.markdown("""
+<style>
+.footer {
+    margin-left : 200px;
+}
+</style>
+""", unsafe_allow_html=True)
 
-
-
+st.markdown('<p class="footer">Issam Merikhi - 2021 - All rights reserved </p>', unsafe_allow_html=True)
 
